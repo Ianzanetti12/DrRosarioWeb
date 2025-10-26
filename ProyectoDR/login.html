@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio de sesión</title>
+  <style>
+    body {
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f3f4f6;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+    .card {
+      width:100%;
+      max-width:350px;
+      background:#fff;
+      border-radius:8px;
+      padding:20px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin:0 0 10px;
+      font-size:1.4rem;
+      text-align:center;
+    }
+    label {
+      display:block;
+      margin:12px 0 6px;
+      font-size:.9rem;
+    }
+    input[type="text"], input[type="password"] {
+      width:94%;
+      padding:10px;
+      border:1px solid #ccc;
+      border-radius:5px;
+      font-size:1rem;
+    }
+    .btn {
+      width:100%;
+      margin-top:16px;
+      padding:10px;
+      border:none;
+      border-radius:5px;
+      background:#3b82f6;
+      color:white;
+      font-size:1rem;
+      cursor:pointer;
+    }
+    .btn:hover {
+      background:#2563eb;
+    }
+    .hint {
+      text-align:center;
+      margin-top:12px;
+      font-size:.85rem;
+      color:#555;
+    }
+    .logo{
+      margin: auto;
+      align-items: center;
+      width: 325px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1>Iniciar sesión</h1>
+    <form action="panel.html">
+        <img class="logo" src="dRdistribucion.png" alt="DR">
+      <label for="usuario">Usuario</label>
+      <input id="usuario" name="usuario" type="text" placeholder="tu_usuario" required />
+
+      <label for="clave">Contraseña</label>
+      <input id="clave" name="clave" type="password" placeholder="••••••••" required />
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+    <p class="hint">¿Olvidaste tu contraseña? <a href="index.html">Comunicate con nostros</a></p>
+  </main>
+</body>
+</html>
