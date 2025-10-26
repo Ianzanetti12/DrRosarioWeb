@@ -1,0 +1,256 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #054687;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: fixed;       /* 🔹 Hace que el header quede fijo */
+  top: 0;                /* 🔹 Lo fija arriba */
+  left: 0;
+  width: 100%;           /* 🔹 Ocupar todo el ancho */
+  z-index: 1000;         /* 🔹 Evita que otros elementos lo tapen */
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Botones de inicio/registro */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons a {
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.auth-buttons a:hover {
+  background-color: white;
+  color: #054687;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.imagenes img {
+  width: 200px;   /* podés ajustar el tamaño */
+  height: auto;
+  border-radius: 8px;
+}
+
+.logo {
+  height: 60px; /* ajustá el tamaño del logo */
+}
+
+
+nav {
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+}
+
+
+/* Navegación */
+.navbar nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+
+.navbar nav a:hover {
+  text-decoration: underline;
+}
+
+
+main {
+  background-color: #fff;
+  padding: 55px 0;
+  margin-top: 100px; /* 🔹 Empuja el contenido hacia abajo */
+}
+
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom:10px;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.section .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  flex: 1 1 300px;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  color: #003366;
+}
+
+footer {
+  background-color: #003366;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .auth-buttons {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .imagenes {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .imagenes img {
+    width: 100%;   /* se adapta al contenedor */
+    max-width: 250px;  /* opcional: límite máximo */
+    height: auto;
+  }
+
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .section .container {
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+    footer {
+    position: static;
+  }
+
+
+}

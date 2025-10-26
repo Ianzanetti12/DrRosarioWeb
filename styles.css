@@ -1,0 +1,187 @@
+:root {
+  --azul-oscuro: #0a2647;
+  --celeste: #0be2fe;
+  --blanco: #ffffff;
+  --gris: #f4f4f4;
+  --texto: #333333;
+  --verde: #2ecc71;
+  --rojo: #e74c3c;
+  --amarillo: #f1c40f;
+}
+/* Evita scroll horizontal */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* ← agregado */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--gris);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #054687;
+  color: var(--blanco);
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  flex: 1; /* ocupa el espacio del medio */
+  text-align: center; /* centra el título */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.card {
+  background: var(--blanco);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.card h2 {
+  color: var(--azul-oscuro);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--celeste);
+  padding-bottom: 0.5rem;
+}
+
+.datos-usuario p {
+  margin: 0.5rem 0;
+  color: var(--texto);
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  table-layout: fixed; 
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+}
+
+.estado {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.preparacion {
+  background-color: var(--amarillo);
+  color: var(--azul-oscuro);
+}
+
+.viaje {
+  background-color: var(--celeste);
+  color: var(--azul-oscuro);
+}
+
+.entregado {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+.cancelado {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+.logo {
+  height: 100px;  /* más chico */
+  width: auto;   /* mantiene proporción */
+}
+
+.logo-container, .empty {
+  flex: 1; /* el logo y el espacio vacío ocupan lo mismo */
+  display: flex;
+  align-items: center;
+}
+
+.empty {
+  justify-content: flex-end; /* mantiene simetría */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .container {
+    display: flex; /* ← más confiable que grid en móviles */
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%;
+    overflow-x: auto; /* ← importante */
+    padding: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .logo {
+    height: 70px; /* más chico en móvil */
+  }
+  table {
+    min-width: 500px; /* ← asegura que no se aplaste */
+    width: max-content; /* ← deja que crezca según su contenido */
+    overflow-x: auto;
+    display: block;
+  }
+
+  
+  thead, tbody, tr, th, td {
+    white-space: nowrap; /* ← evita que las celdas bajen a otra línea */
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .datos-usuario p {
+    font-size: 0.9rem;
+  }
+
+  .estado {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+}
